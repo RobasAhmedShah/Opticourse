@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "oracledb": "^6.2.0",
+    "sequelize": "^6.33.0",
+    "sequelize-cli": "^6.6.1"
+  }
+}

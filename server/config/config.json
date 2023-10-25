@@ -1,0 +1,27 @@
+{
+  "development": {
+    "username": "FAST",
+    "password": "fast",
+    "database": "xe",
+    "host": "127.0.0.1",
+    "dialect": "oracle",
+    "dialectOptions": {
+      "use_oci8": true,
+      "connectString": "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SID=xe)))"
+    }
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
