@@ -1,6 +1,6 @@
 # Opticourse: Seamless Course Selection 
 
-<img src="./frontend/src/logo.png" align="right" width="256" height="256" style="margin: 0 10px">
+<img src="./client/app/src/assets/logo.png" align="right" width="256" height="256" style="margin: 0 10px">
 
 Opticourse is an advanced course selection system that simplifies the process of choosing courses for academic programs. With intelligent clash detection, Opticourse empowers users to make well-informed decisions when selecting their courses.
 
