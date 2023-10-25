@@ -1,38 +1,91 @@
-.App {
+/* Apply the glow effect to the logo using the drop-shadow filter and transition */
+.logo {
+  filter: drop-shadow(0 0 0 rgba(0, 123, 255, 0.7));
+  transition: filter 0.3s ease; /* Add a transition for smooth effect */
+}
+
+/* Apply the glow effect on hover */
+.logo:hover {
+  filter: drop-shadow(0 0 10px rgba(0, 123, 255, 0.7));
+}
+
+/* Rest of your existing styles */
+/* Navbar styles */
+.navbar {
+  border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+}
+
+/* User picture styles */
+.user-picture {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/* User dropdown styles */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+}
+
+/* Make dropdown items look like buttons */
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
   text-align: center;
+  background-color: #343a40;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dropdown-item:hover {
+  background-color: #23282d;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Button styles for "Login" link */
+.nav-link.nav-link-login {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-link-login:hover {
+  background-color: #0056b3; /* Darker blue on hover */
 }
 
-.App-link {
-  color: #61dafb;
+/* Adjust dropdown menu position */
+.dropdown-menu.dropdown-menu-right {
+  right: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Add a transition for smooth appearance and disappearance */
+.navbar {
+  background-color: #343a40; /* Set the background color */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for transform and opacity */
+}
+
+/* Add styles for hidden navbar */
+.navbar.navbar-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
 }
