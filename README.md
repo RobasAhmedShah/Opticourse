@@ -1,4 +1,4 @@
-# Opticourse: Seamless Course Selection System
+# Opticourse: Seamless Course Selection 
 
 <img src="./frontend/src/logo.png" align="right" width="256" height="256" style="margin: 0 10px">
 
