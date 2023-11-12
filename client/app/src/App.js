@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Login from "./components/login";
 import Home from "./components/home";
+import Courses from "./components/courses"
 
 import OpticourseLogo from "./assets/logo.png";
 import "./App.css";
@@ -39,7 +40,7 @@ function App() {
   return (
     <div>
       <nav
-        className={`navbar navbar-expand navbar-dark bg-dark ${
+        className={`navbar navbar-expand navbar-light bg-light ${
           isNavbarVisible ? "navbar-visible" : "navbar-hidden"
         }`}
       >
@@ -50,7 +51,6 @@ function App() {
             alt="Opticourse Logo"
             className="logo"
           />
-          Opticourse
         </Link>
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
@@ -80,6 +80,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login login={login} />} />
+          <Route path="/courses" element={<Courses />} />
         </Routes>
       </div>
     </div>

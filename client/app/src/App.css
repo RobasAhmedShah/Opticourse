@@ -1,4 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese");
+
 /* Apply the glow effect to the logo using the drop-shadow filter and transition */
+.navbar {
+  font-family: "Muli", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
 .logo {
   filter: drop-shadow(0 0 0 rgba(0, 123, 255, 0.7));
   transition: filter 0.3s ease; /* Add a transition for smooth effect */
@@ -41,7 +48,7 @@
   padding: 0.5rem 1rem;
   text-align: center;
   background-color: #343a40;
-  color: #fff;
+  color: #000000;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -75,7 +82,7 @@
 
 /* Add a transition for smooth appearance and disappearance */
 .navbar {
-  background-color: #343a40; /* Set the background color */
+  background-color: white; /* Set the background color */
   position: fixed;
   top: 0;
   left: 0;
