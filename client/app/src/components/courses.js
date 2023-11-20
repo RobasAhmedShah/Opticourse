@@ -1,32 +1,39 @@
 import React from "react";
-import "./courses.css"; // Create a separate CSS file for styling
+import "./courses.css"; // CSS file for styling
 
-const Courses = () => {
+const CoursesPage = () => {
   return (
-    <div className="courses-page">
-      <section className="course-section">
-        <h1 className="course-header">Explore Our Courses</h1>
-        <p className="course-description">
-          Discover a wide range of courses designed to help you achieve your
-          academic goals.
-        </p>
-      </section>
-
-      <section className="course-list">
-        <div className="course">
-          <h2 className="course-title">Course 1</h2>
-          <p className="course-details">Lorem ipsum dolor sit amet...</p>
+    <div>
+      <div className="section full-height">
+        <div className="section-title-wrap">
+          <div className="container">
+            <div className="row">
+              <div
+                className="col-12 text-center parallax-fade-top"
+                style={{ top: '0.5px', opacity: '0.998571' }}
+              >
+                <p>Welcome to Courses</p>
+                <h1>Choose Your Courses</h1>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div className="course">
-          <h2 className="course-title">Course 2</h2>
-          <p className="course-details">Consectetur adipiscing elit...</p>
+      <div className="section full-height">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-md-7 text-center">
+            <button class="btn-donate"> Upload
+            </button>
+            <button class="btn-donate"> Make your own
+            </button>
+            </div>
+          </div>
         </div>
-
-        {/* Add more courses as needed */}
-      </section>
+      </div>
     </div>
   );
 };
 
-export default Courses;
+export default CoursesPage;
