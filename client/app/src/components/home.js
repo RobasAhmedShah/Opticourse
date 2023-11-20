@@ -56,36 +56,36 @@ const Home = () => {
     scrollBanner();
 
     // Page cursors
-    document.getElementsByTagName('body')[0].addEventListener('mousemove', function (n) {
-      $('#cursor').css({ left: n.clientX + 'px', top: n.clientY + 'px' });
-      $('#cursor2').css({ left: n.clientX + 'px', top: n.clientY + 'px' });
-      $('#cursor3').css({ left: n.clientX + 'px', top: n.clientY + 'px' });
-    });
+    // document.getElementsByTagName('body')[0].addEventListener('mousemove', function (n) {
+    //   $('#cursor').css({ left: n.clientX + 'px', top: n.clientY + 'px' });
+    //   $('#cursor2').css({ left: n.clientX + 'px', top: n.clientY + 'px' });
+    //   $('#cursor3').css({ left: n.clientX + 'px', top: n.clientY + 'px' });
+    // });
 
-    var t = document.getElementById('cursor'),
-      e = document.getElementById('cursor2'),
-      i = document.getElementById('cursor3');
+    // // var t = document.getElementById('cursor'),
+    //   var e = document.getElementById('cursor2'),
+    //   i = document.getElementById('cursor3');
 
-    function n() {
-      e.classList.add('hover');
-      i.classList.add('hover');
-    }
+    // function n() {
+    //   e.classList.add('hover');
+    //   i.classList.add('hover');
+    // }
 
-    function s() {
-      e.classList.remove('hover');
-      i.classList.remove('hover');
-    }
+    // function s() {
+    //   e.classList.remove('hover');
+    //   i.classList.remove('hover');
+    // }
 
-    s();
-    var r = document.querySelectorAll('.hover-target');
-    for (var a = r.length - 1; a >= 0; a--) {
-      o(r[a]);
-    }
+    // s();
+    // var r = document.querySelectorAll('.hover-target');
+    // for (var a = r.length - 1; a >= 0; a--) {
+    //   o(r[a]);
+    // }
 
-    function o(t) {
-      t.addEventListener('mouseover', n);
-      t.addEventListener('mouseout', s);
-    }
+    // function o(t) {
+    //   t.addEventListener('mouseover', n);
+    //   t.addEventListener('mouseout', s);
+    // }
 
     // Scroll back to top
     $(document).ready(function () {
@@ -246,10 +246,6 @@ const Home = () => {
     </div>
 
     <div className="scroll-to-top hover-target"></div>
-
-    <div className="cursor" id="cursor" style={{ left: '331px', top: '132px' }}></div>
-    <div className="cursor2" id="cursor2" style={{ left: '331px', top: '132px' }}></div>
-    <div className="cursor3" id="cursor3" style={{ left: '331px', top: '132px' }}></div>
 
     <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

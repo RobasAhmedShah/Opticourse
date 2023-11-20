@@ -20,47 +20,151 @@ body {
 a:hover {
   text-decoration: none;
 }
-/* #Cursor
-================================================== */
+/* Styling for the form container */
+.containerform {
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: 100px; /* Adjust the top value to move it below the nav bar */
+  transition: all 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-.cursor,
-.cursor2,
-.cursor3 {
-  position: fixed;
-  border-radius: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  pointer-events: none;
-  left: -100px;
-  top: 50%;
+.inputss {
+  --input-focus: #2d8cf0;
+  --font-color: #fefefe;
+  --font-color-sub: #7e7e7e;
+  --bg-color: #111111;
+  --main-color: #fefefe;
+  width: 400px; /* Increase the width to make the input bigger */
+  height: 60px; /* Increase the height to make the input bigger */
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 20px; /* Increase the font size to match the bigger input */
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+  margin-bottom: 20px; /* Add margin to create space between inputs */
 }
-.cursor {
-  background-color: rgb(61, 148, 223);
-  height: 0;
+
+.inputss::placeholder {
+  color: var(--font-color-sub);
+  opacity: 0.8;
+}
+
+.inputss:focus {
+  border: 2px solid var(--input-focus);
+}
+
+.buttonplus {
+  position: relative;
+  display:inline;
+  padding: 1em 1.5em;
+  transform: rotateX(40deg)rotateZ(40deg);
+  transform-style: preserve-3d;
+  border: .1em solid black;
+  transition: all 150ms;
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+.buttonplus::before {
+  content: "";
+  position: absolute;
+  width: 2em;
+  height: 99%;
+  border: .1em solid black;
+  top: -.15em;
+  right: 0;
+  transform-origin: right;
+  transform: rotateY(-90deg);
+  transition: all 150ms;
+  background-color: #2d8cf0;
+}
+
+.buttonplus::after {
+  content: "+";
+  position: relative;
+  width: 100%;
+  height: 2em;
+  border: .1em solid black;
+  bottom: 0;
+  left: -.15em;
+  transform-origin: bottom;
+  transform: rotateX(90deg);
+  transition: all 150ms;
+  background-color: aqua;
+}
+
+.buttonplus:active {
+  transform: rotateX(40deg)rotateZ(40deg) translateZ(-1em);
+}
+
+.buttonplus:active::before {
   width: 0;
-  z-index: 99999;
 }
-.cursor2,
-.cursor3 {
-  height: 36px;
-  width: 36px;
-  z-index: 99998;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+
+.buttonplus:active::after {
+  height: 0;
 }
-.cursor2.hover,
-.cursor3.hover {
-  -webkit-transform: scale(2) translateX(-25%) translateY(-25%);
-  transform: scale(2) translateX(-25%) translateY(-25%);
-  border: none;
+
+
+/* Add a separator line between inputs */
+.separator {
+  height: 2px;
+  background-color: var(--main-color);
+  margin-bottom: 20px; /* Add margin to create space between inputs */
 }
-.cursor2 {
-  border: 2px solid rgb(0, 123, 255);
-  box-shadow: 0 0 22px rgba(255, 255, 255, 0.6);
-}
-.cursor2.hover {
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
-}
+
+
+  /* #Cursor
+  ================================================== */
+
+  .cursor,
+  .cursor2,
+  .cursor3 {
+    position: fixed;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    pointer-events: none;
+    left: -100px;
+    top: 50%;
+  }
+  .cursor {
+    background-color: rgb(61, 148, 223);
+    height: 0;
+    width: 0;
+    z-index: 99999;
+  }
+  .cursor2,
+  .cursor3 {
+    height: 36px;
+    width: 36px;
+    z-index: 99998;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .cursor2.hover,
+  .cursor3.hover {
+    -webkit-transform: scale(2) translateX(-25%) translateY(-25%);
+    transform: scale(2) translateX(-25%) translateY(-25%);
+    border: none;
+  }
+  .cursor2 {
+    border: 2px solid rgb(0, 123, 255);
+    box-shadow: 0 0 22px rgba(255, 255, 255, 0.6);
+  }
+  .cursor2.hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+  }
 @media screen and (max-width: 1200px) {
   .cursor,
   .cursor2,
@@ -109,7 +213,7 @@ a:hover {
   display: block;
 }
 .full-height {
-  height: 100vh;
+  height: 45vh;
 }
 .section.z-bigger {
   z-index: 100;
@@ -119,7 +223,7 @@ a:hover {
 }
 .section-title-wrap {
   position: absolute;
-  top: 50%;
+  top: 75%;
   left: 0;
   width: 100%;
   transform: translateY(-50%);
@@ -144,7 +248,7 @@ a:hover {
 }
 .padding-top-bottom {
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 .over-hide {
   overflow: hidden;
@@ -177,6 +281,16 @@ a:hover {
 }
 
 
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
 /* === removing default button style ===*/
 .btn-donate {
   --clr-font-main: hsla(0 0% 20% / 100);
@@ -184,7 +298,7 @@ a:hover {
   --btn-bg-2: hsla(217 100% 56% / 1);
   --btn-bg-color: hsla(360 100% 100% / 1);
   --radii: 0.5em;
-  
+  margin-right: 16px;
   cursor: pointer;
   padding: 0.9em 1.4em;
   min-width: 120px;
@@ -479,30 +593,4 @@ a:hover {
   .case-study-images li .hero-number-back {
     font-size: 32vw;
   }
-}
-
-/* #Link to page
-================================================== */
-
-.link-to-portfolio {
-  position: fixed;
-  top: 30px;
-  right: 30px;
-  z-index: 20;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  border-radius: 3px;
-  background-position: center center;
-  background-size: cover;
-  background-image: url("https://ivang-design.com/ig-logo.jpg");
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
-  transition: opacity 0.2s, border-radius 0.2s, box-shadow 0.2s;
-  transition-timing-function: ease-out;
-}
-.link-to-portfolio:hover {
-  opacity: 0.8;
-  border-radius: 50%;
-  box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1);
 }

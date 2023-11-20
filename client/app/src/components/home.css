@@ -89,6 +89,7 @@ a:hover {
     rgba(254, 253, 253, 0.77)
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 900;
   z-index: 1;
